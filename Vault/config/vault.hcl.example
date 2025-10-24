@@ -1,0 +1,19 @@
+storage "file" {
+  # En Windows, usa barras normales (/) o escapa las barras invertidas (\\)
+  # Ejemplo con barras normales para evitar errores de escape:
+  path = "C:\\Vault"
+}
+
+listener "tcp" {
+  address     = "0.0.0.0:8200"
+  tls_disable = 1
+}
+
+# Requerido en Windows
+disable_mlock = true
+
+# UI web opcional
+ui = true
+
+# La URL que Vault anuncia a los clientes
+api_addr = "http://127.0.0.1:8200"
