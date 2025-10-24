@@ -9,10 +9,12 @@
 aztfexport/*
 *.txt
 /vault/core/*
-data/*
-logical/*
-logs/*
-sys/*
+/vault/data/*
+/vault/logical/*
+/vault/logs/*
+/vault/sys/*
 *.hcl
 .venv/
 .vscode/
+*.bin
+*.json

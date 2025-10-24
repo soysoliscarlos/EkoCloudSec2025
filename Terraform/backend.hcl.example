@@ -1,0 +1,15 @@
+# Backend remoto de Terraform en Azure Storage
+# Copia este archivo a backend.hcl y completa los valores
+
+resource_group_name  = "RG-TFSTATE"
+storage_account_name = "stgekoparty2025"
+container_name       = "tfstate"
+key                  = "ekoparty2025/terraform.tfstate"
+
+# Opcional: usa autenticación de Azure AD (sin access keys)
+# Requiere permisos de Storage Blob Data Contributor en la cuenta de storage
+use_azuread_auth = true
+
+# Opcional: fuerza suscripción/tenant (normalmente se detectan del CLI)
+# subscription_id = "00000000-0000-0000-0000-000000000000"
+# tenant_id       = "00000000-0000-0000-0000-000000000000"
