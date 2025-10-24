@@ -10,6 +10,7 @@ resource "azurerm_key_vault" "rag" {
 
   # Deshabilitar acceso público
   public_network_access_enabled = true
+  # public_network_access_enabled = false
 
   tags = local.etiquetas_comunes
 
